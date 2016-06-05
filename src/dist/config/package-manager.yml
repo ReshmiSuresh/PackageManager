@@ -1,0 +1,75 @@
+localRepo: /Users/reshmi/dependencies
+
+gitRepo: https://github.com/ReshmiSuresh/Dependencies.git
+
+# HTTP-specific options.
+http:
+
+  # The port on which the HTTP server listens for service requests.
+  port: 8080
+
+  # The port on which the HTTP server listens for administrative requests.
+  adminPort: 8081
+
+  maxThreads: 100
+
+  minThreads: 10
+
+  connectorType: blocking
+
+#  ssl:
+#    keyStore: ./example.keystore
+#    keyStorePassword: example
+#
+#    keyStoreType: JKS # (optional, JKS is default)
+
+  # HTTP request log settings
+  requestLog:
+    # Settings for logging to stdout.
+    console:
+      # If true, write log statements to stdout.
+      enabled: true
+
+    # Settings for logging to a file.
+    file:
+      # If true, write log statements to a file.
+      enabled: true
+
+      currentLogFilename: ./logs/requests.log
+
+      archivedLogFilenamePattern: ./logs/requests-%d.log.gz
+
+      archivedFileCount: 5
+
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  loggers:
+    com.example.app: DEBUG
+    org.hibernate.SQL: ALL
+
+  # Settings for logging to stdout.
+  console:
+
+    # If true, write log statements to stdout.
+    enabled: true
+
+    # Do not display log statements below this threshold to stdout.
+    threshold: ALL
+
+  # Settings for logging to a file.
+  file:
+
+    # If true, write log statements to a file.
+    enabled: true
+
+    # Do not write log statements below this threshold to the file.
+    threshold: ALL
+
+    currentLogFilename: ./logs/example.log
+
+    archivedLogFilenamePattern: ./logs/example-%d.log.gz
+
+    archivedFileCount: 5
