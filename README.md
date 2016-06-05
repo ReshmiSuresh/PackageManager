@@ -30,7 +30,7 @@ Refer [dropwizard configuration](http://www.dropwizard.io/0.6.2/manual/core.html
 
 #### Running application
 
-1. Run `./bin/PackageManager update src/dist/config/package-manager.yml` to install/update the packages
+1. Run `./bin/PackageManager update config/package-manager.yml` to install/update the package list
 2. Run `./bin/PackageManager install config/package-manager.yml <package-name>`. This will print out a map of the required dependencies and where you can find them in the order in which they should be installed
 
 ## Create a Jar
